@@ -1,0 +1,557 @@
+@charset "UTF-8";
+/*Variables Colors*/
+*,
+html {
+  font-family: "Mulish", sans-serif;
+}
+
+* body,
+html body {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+h1.title {
+  color: #3c3c3a;
+  font-weight: bold;
+  font-size: 72px;
+}
+
+p {
+  font-size: 18px;
+  color: #3c3c3a;
+}
+
+.home-section-1 {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.home-section-1 div.icon-rockect {
+  width: 85px;
+  height: 35px;
+  background-image: url(../img/icons/rockect-config_green.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home-section-1 h1.title {
+  margin-bottom: 30px;
+}
+
+.home-section-1 h1.title::after {
+  content: url(.././img/slider/green_dot.png);
+}
+
+/*#region  Navbar*/
+nav.navbar.navbar-expand-md {
+  background-color: #fff;
+  color: #3c3c3a;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+nav.navbar.navbar-expand-md .nav-item {
+  margin-left: 35px;
+}
+
+nav.navbar.navbar-expand-md a,
+nav.navbar.navbar-expand-md .nav-link {
+  color: unset;
+  text-decoration: unset;
+}
+
+nav.navbar.navbar-expand-md a.nav-link {
+  position: relative;
+}
+
+nav.navbar.navbar-expand-md a.nav-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-top: 3px solid;
+  border-color: #ccdc27;
+  width: 40px;
+  right: 10px;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+nav.navbar.navbar-expand-md a.nav-link:hover:after {
+  opacity: 1;
+}
+
+.slider-jobs {
+  position: relative;
+  background-image: url(.././img/slider/gray_square.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-x: left;
+  padding-bottom: 6em;
+  font-size: 16px;
+  font-weight: normal;
+  overflow: hidden;
+}
+
+.slider-jobs::after {
+  content: url(.././img/slider/gray_bar.png);
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+.slider-jobs span {
+  font-size: 30px;
+  color: #b1b1b0;
+  font-weight: bold;
+}
+
+.slider-jobs .title::after {
+  content: url(.././img/slider/gray_dot.png);
+  display: inline-block;
+  position: absolute;
+  bottom: 5px;
+  padding-left: 5px;
+}
+
+.slider-jobs ul {
+  list-style: none;
+}
+
+.slider-jobs li::before {
+  content: "•";
+  color: #b1b1b0;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.slider-jobs .slider-jobs {
+  position: relative;
+  background-image: url(.././img/slider/gray_square.png);
+}
+
+.slider-jobs .slider-jobs::after {
+  content: url(.././img/slider/gray_bar.png);
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 20px;
+}
+
+.slider-jobs .slider-jobs span {
+  font-size: 30px;
+  color: #b1b1b0;
+  font-weight: bold;
+}
+
+.slider-jobs .slider-jobs .title::after {
+  content: url(.././img/slider/gray_dot.png);
+}
+
+.slider-jobs .slider-jobs ul {
+  list-style: none;
+}
+
+.slider-jobs .slider-jobs li::before {
+  content: "•";
+  color: #b1b1b0;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.slider-jobs .slider-jobs .buttom {
+  background-color: #b1b1b0;
+}
+
+.slider-jobs.slider-jobs--green {
+  background-image: url(.././img/slider/green_square.png);
+}
+
+.slider-jobs.slider-jobs--green::after {
+  content: url(.././img/slider/green_bar.png);
+}
+
+.slider-jobs.slider-jobs--green .title::after {
+  content: url(.././img/slider/green_dot.png);
+}
+
+.slider-jobs.slider-jobs--green span {
+  color: #ccdc27;
+}
+
+.slider-jobs.slider-jobs--green li::before {
+  color: #ccdc27;
+}
+
+.slider-jobs.slider-jobs--green .buttom {
+  background-color: #ccdc27;
+}
+
+.slider-jobs.slider-jobs--blue {
+  background-image: url(.././img/slider/blue_square.png);
+}
+
+.slider-jobs.slider-jobs--blue::after {
+  content: url(.././img/slider/blue_bar.png);
+}
+
+.slider-jobs.slider-jobs--blue .title::after {
+  content: url(.././img/slider/blue_dot.png);
+}
+
+.slider-jobs.slider-jobs--blue span {
+  color: #009ce0;
+}
+
+.slider-jobs.slider-jobs--blue li::before {
+  color: #009ce0;
+}
+
+.slider-jobs.slider-jobs--blue .buttom {
+  background-color: #009ce0;
+}
+
+.slider-jobs.slider-jobs--yellow {
+  background-image: url(.././img/slider/yellow_square.png);
+}
+
+.slider-jobs.slider-jobs--yellow::after {
+  content: url(.././img/slider/yellow_bar.png);
+}
+
+.slider-jobs.slider-jobs--yellow .title::after {
+  content: url(.././img/slider/yellow_dot.png);
+}
+
+.slider-jobs.slider-jobs--yellow span {
+  color: #f9bf00;
+}
+
+.slider-jobs.slider-jobs--yellow li::before {
+  color: #f9bf00;
+}
+
+.slider-jobs.slider-jobs--yellow .buttom {
+  background-color: #f9bf00;
+}
+
+.buttom {
+  padding: 15px;
+  /*espacio alrededor texto*/
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #b1b1b0;
+  /*color botón*/
+  color: #ffffff;
+  /*color texto*/
+  text-decoration: none;
+  /*decoración texto*/
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 50px;
+  /*bordes redondos*/
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.buttom:hover {
+  color: #fff;
+  text-decoration: unset;
+  box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
+  -webkit-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
+}
+
+footer {
+  background-color: #009ce0;
+  color: #fff;
+  width: 100%;
+  min-height: 50px;
+  border-top: 7px solid #009ce0;
+}
+
+footer div.d-flex.flex-column {
+  margin: auto;
+}
+
+footer img {
+  margin: auto;
+  margin-top: 20px;
+}
+
+footer img.footer-icon {
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 18px;
+  padding-right: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+footer img.footer-icon.footer-icon--facebook {
+  background-image: url(../img/icons/icon_facebook.png);
+}
+
+footer img.footer-icon.footer-icon--instagram {
+  background-image: url(../img/icons/icon_instagram.png);
+}
+
+footer img.footer-icon.footer-icon--linkedin {
+  background-image: url(../img/icons/icon_linkeden.png);
+}
+
+footer a {
+  color: #fff;
+}
+
+footer ul {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  max-width: 600px;
+  list-style-type: none;
+  list-style: none;
+  padding: unset;
+  border-top: 1px solid #fff;
+}
+
+footer ul li {
+  font-size: 13px;
+  margin: 7px;
+  padding: 13px;
+}
+
+.paises {
+  margin-top: 4em;
+  margin-bottom: 5em;
+}
+
+.paises .card {
+  margin-bottom: .7em;
+  background-color: #F2F4FF;
+}
+
+.paises .card .card-body {
+  background-color: #fff;
+}
+
+.paises .card .card-body .about-paises h1 {
+  font-weight: bold;
+  font-size: 72px;
+  color: #3c3c3a;
+  display: inline-block;
+  line-height: .1;
+}
+
+.paises .card .card-body .about-paises h1::after {
+  content: url(.././img/slider/gray_dot.png);
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  content: url(.././img/slider/green_dot.png);
+  position: relative;
+  left: 0.1em;
+}
+
+.paises .card .card-body .about-paises h1::before {
+  content: url(../img/other_Images/BeforeAboutNic.png);
+  display: block;
+  margin-bottom: .5em;
+}
+
+.paises .card .card-body .about-paises li::marker {
+  color: #ccdc27;
+}
+
+.paises .card .card-body .about-paises .buttom {
+  display: inline-block;
+  margin-top: .5em;
+  background-color: #ccdc27;
+}
+
+.paises .card .card-header {
+  padding: 0 0 0 1.25rem;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.paises .card .card-header .btn {
+  width: auto;
+  font-weight: bold;
+  font-size: 30px;
+  color: #3c3c3a;
+}
+
+.paises .card .card-header .btn:hover, .paises .card .card-header .btn:active, .paises .card .card-header .btn:focus {
+  text-decoration: none;
+}
+
+.paises .card .bandera {
+  padding-right: 0;
+}
+
+.paises .card .bandera img {
+  max-width: initial;
+  width: 100%;
+}
+
+.title-testim {
+  margin-bottom: 1.5em;
+}
+
+.title-testim h2 {
+  font-weight: bold;
+}
+
+.title-testim span {
+  font-size: 18px;
+}
+
+.title-testim span:after {
+  content: '';
+  width: 7%;
+  height: 2px;
+  background-color: #ccdc27;
+  display: block;
+  margin-top: 4px;
+}
+
+.testimon-paises {
+  margin-top: 3em;
+}
+
+.testim-content {
+  font-size: 18px;
+  margin-bottom: 2.5em;
+}
+
+.testim-content::before {
+  content: '';
+  background-image: url(../img/other_Images/Before-content-text.png);
+  width: 30px;
+  height: 18px;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.testim-content::after {
+  content: '';
+  background-image: url(../img/other_Images/After-content-text.png);
+  width: 30px;
+  height: 18px;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.slick-dots li button:before {
+  font-size: 20px;
+  color: #ccdc27;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ccdc27;
+  opacity: 1;
+}
+
+.testi-img {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.testi-img img {
+  -webkit-transform: rotate(14deg);
+          transform: rotate(14deg);
+  margin: 0 auto;
+}
+
+.people-img {
+  text-align: right;
+}
+
+.people-img img {
+  -webkit-transform: rotate(14deg);
+          transform: rotate(14deg);
+}
+
+/*
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::
+    Bootstrap 4 breakpoints
+*/
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+/* Large devices (desktops, 992px and up) */
+/* Extra large devices (large desktops, 1200px and up) */
+/*==========  Non-Mobile First Method  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .slider-jobs h1.title {
+    font-size: 30px;
+  }
+  .slider-jobs::after {
+    -webkit-transform: translateX(-40%);
+            transform: translateX(-40%);
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .home-section-1 {
+    border: 1px solid red;
+  }
+  h1.title {
+    font-size: 50px;
+  }
+  .slider-jobs a.buttom {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .home-section-1 {
+    border: 1px solid blue;
+  }
+  .slider-jobs::after {
+    -webkit-transform: translateX(-65%);
+            transform: translateX(-65%);
+  }
+  .slider-jobs a.buttom {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+/* Set width to make card deck cards 100% width */
+/*# sourceMappingURL=style.css.map */
