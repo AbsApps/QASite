@@ -1,0 +1,7 @@
+@mixin title-after-dot {
+    content: url(.././img/slider/gray_dot.png);
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+}

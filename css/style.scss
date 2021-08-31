@@ -1,0 +1,559 @@
+@import "mixins";
+
+/*Variables Colors*/
+
+$base_green: #ccdc27;
+$base_skyblue: #009ce0;
+$base_yellow: #f9bf00;
+$base_gray: #3c3c3a;
+$base_gray_secondary: #b1b1b0;
+*,
+html {
+    font-family: "Mulish", sans-serif;
+    body {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+h1.title {
+    color: $base_gray;
+    font-weight: bold;
+    font-size: 72px;
+}
+
+p {
+    font-size: 18px;
+    color: $base_gray;
+}
+
+.home-section-1 {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    div.icon-rockect {
+        width: 85px;
+        height: 35px;
+        background-image: url(../img/icons/rockect-config_green.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    h1.title {
+        margin-bottom: 30px;
+    }
+    h1.title::after {
+        content: url(.././img/slider/green_dot.png);
+        // display: inline-block;
+        // position: absolute;
+        // bottom: 0;
+        // right: 0px;
+    }
+}
+
+//---------------------------
+// Modificando Navbar Global
+//---------------------------
+
+/*#region  Navbar*/
+
+nav.navbar.navbar-expand-md {
+    background-color: #fff;
+    color: $base_gray;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    .nav-item {
+        margin-left: 35px;
+    }
+    a,
+    .nav-link {
+        color: unset;
+        text-decoration: unset;
+    }
+    a.nav-link {
+        position: relative;
+    }
+    a.nav-link::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-top: 3px solid;
+        border-color: $base_green;
+        width: 40px;
+        right: 10px;
+        transition: opacity 0.5s;
+        opacity: 0;
+    }
+    a.nav-link:hover:after {
+        opacity: 1;
+    }
+}
+
+.slider-jobs {
+    position: relative;
+    background-image: url(.././img/slider/gray_square.png);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: left;
+    padding-bottom: 6em;
+    font-size: 16px;
+    font-weight: normal;
+    overflow: hidden;
+    &::after {
+        content: url(.././img/slider/gray_bar.png);
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        // left: 0;
+        bottom: 0;
+        // height: 20px;
+    }
+    span {
+        font-size: 30px;
+        color: $base_gray_secondary;
+        font-weight: bold;
+    }
+    .title::after {
+        content: url(.././img/slider/gray_dot.png);
+        display: inline-block;
+        position: absolute;
+        bottom: 5px;
+        padding-left: 5px;
+    }
+    ul {
+        list-style: none;
+    }
+    li::before {
+        content: "•";
+        color: $base_gray_secondary;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .slider-jobs {
+        position: relative;
+        background-image: url(.././img/slider/gray_square.png);
+        &::after {
+            content: url(.././img/slider/gray_bar.png);
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 20px;
+        }
+        span {
+            font-size: 30px;
+            color: $base_gray_secondary;
+            font-weight: bold;
+        }
+        .title::after {
+            content: url(.././img/slider/gray_dot.png);
+        }
+        ul {
+            list-style: none;
+        }
+        li::before {
+            content: "•";
+            color: $base_gray_secondary;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .buttom {
+            background-color: $base_gray_secondary;
+        }
+    }
+    //------------------------------
+    // ******  COLOR GREEN  ********
+    //------------------------------
+    &.slider-jobs--green {
+        background-image: url(.././img/slider/green_square.png);
+        &::after {
+            content: url(.././img/slider/green_bar.png);
+        }
+        .title::after {
+            content: url(.././img/slider/green_dot.png);
+        }
+        span {
+            color: $base_green;
+        }
+        li::before {
+            color: $base_green;
+        }
+        .buttom {
+            background-color: $base_green;
+        }
+    }
+    //------------------------------
+    // ******  COLOR BLUE  ********
+    //------------------------------
+    &.slider-jobs--blue {
+        background-image: url(.././img/slider/blue_square.png);
+        &::after {
+            content: url(.././img/slider/blue_bar.png);
+        }
+        .title::after {
+            content: url(.././img/slider/blue_dot.png);
+        }
+        span {
+            color: $base_skyblue;
+        }
+        li::before {
+            color: $base_skyblue;
+        }
+        .buttom {
+            background-color: $base_skyblue;
+        }
+    }
+    //------------------------------
+    // ******  COLOR Yellow  ********
+    //------------------------------
+    &.slider-jobs--yellow {
+        background-image: url(.././img/slider/yellow_square.png);
+        &::after {
+            content: url(.././img/slider/yellow_bar.png);
+        }
+        .title::after {
+            content: url(.././img/slider/yellow_dot.png);
+        }
+        span {
+            color: $base_yellow;
+        }
+        li::before {
+            color: $base_yellow;
+        }
+        .buttom {
+            background-color: $base_yellow;
+        }
+    }
+}
+
+// Estilos para los botones
+.buttom {
+    padding: 15px;
+    /*espacio alrededor texto*/
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: $base_gray_secondary;
+    /*color botón*/
+    color: #ffffff;
+    /*color texto*/
+    text-decoration: none;
+    /*decoración texto*/
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 50px;
+    /*bordes redondos*/
+    transition: all 0.1s;
+    &:hover {
+        color: #fff;
+        text-decoration: unset;
+        box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
+        -webkit-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
+    }
+}
+
+footer {
+    background-color: $base_skyblue;
+    color: #fff;
+    width: 100%;
+    min-height: 50px;
+    border-top: 7px solid #009ce0;
+    div.d-flex.flex-column {
+        margin: auto;
+    }
+    img {
+        margin: auto;
+        margin-top: 20px;
+    }
+    img.footer-icon {
+        width: 25px;
+        height: 25px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-left: 18px;
+        padding-right: 18px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    img.footer-icon.footer-icon--facebook {
+        background-image: url(../img/icons/icon_facebook.png);
+    }
+    img.footer-icon.footer-icon--instagram {
+        background-image: url(../img/icons/icon_instagram.png);
+    }
+    img.footer-icon.footer-icon--linkedin {
+        background-image: url(../img/icons/icon_linkeden.png);
+    }
+    a {
+        color: #fff;
+    }
+    ul {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 600px;
+        list-style-type: none;
+        list-style: none;
+        padding: unset;
+        border-top: 1px solid #fff;
+    }
+    ul li {
+        font-size: 13px;
+        margin: 7px;
+        padding: 13px;
+    }
+}
+
+.paises {
+    margin-top: 4em;
+    margin-bottom: 5em;
+    .card {
+        margin-bottom: .7em;
+        background-color: #F2F4FF;
+        .card-body {
+            background-color: #fff;
+            .about-paises {
+                h1 {
+                    font-weight: bold;
+                    font-size: 72px;
+                    color: $base_gray;
+                    display: inline-block;
+                    line-height: .1;
+                    // position: relative;
+                    &::after {
+                        @include title-after-dot;
+                        content: url(.././img/slider/green_dot.png);
+                        position: relative;
+                        left: 0.1em;
+                    }
+                    &::before {
+                        content: url(../img/other_Images/BeforeAboutNic.png);
+                        display: block;
+                        margin-bottom: .5em;
+                    }
+                }
+                li {
+                    &::marker {
+                        color: $base_green;
+                    }
+                }
+                .buttom {
+                    display: inline-block;
+                    margin-top: .5em;
+                    background-color: $base_green;
+                }
+            }
+        }
+        .card-header {
+            padding: 0 0 0 1.25rem;
+            padding-right: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            .btn {
+                width: auto;
+                font-weight: bold;
+                font-size: 30px;
+                color: $base_gray;
+                &:hover,
+                &:active,
+                &:focus {
+                    text-decoration: none;
+                }
+            }
+        }
+        .bandera {
+            padding-right: 0;
+            img {
+                max-width: initial;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.title-testim {
+    margin-bottom: 1.5em;
+    h2 {
+        font-weight: bold;
+    }
+    span {
+        font-size: 18px;
+        &:after {
+            content: '';
+            width: 7%;
+            height: 2px;
+            background-color: $base_green;
+            display: block;
+            margin-top: 4px;
+        }
+    }
+}
+
+.testimon-paises {
+    margin-top: 3em;
+}
+
+.testim-content {
+    font-size: 18px;
+    margin-bottom: 2.5em;
+    &::before {
+        content: '';
+        background-image: url(../img/other_Images/Before-content-text.png);
+        width: 30px;
+        height: 18px;
+        display: inline-block;
+        background-repeat: no-repeat;
+    }
+    &::after {
+        content: '';
+        background-image: url(../img/other_Images/After-content-text.png);
+        width: 30px;
+        height: 18px;
+        display: inline-block;
+        background-repeat: no-repeat;
+    }
+}
+
+.slick-dots li button:before {
+    font-size: 20px;
+    color: $base_green;
+}
+
+.slick-dots {
+    li.slick-active {
+        button {
+            &:before {
+                color: $base_green;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.testi-img {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    img {
+        transform: rotate(14deg);
+        margin: 0 auto;
+    }
+}
+
+.people-img {
+    text-align: right;
+    img {
+        transform: rotate(14deg);
+    }
+}
+
+// ####################################################
+// M E D I A  Q U E R I E S
+// ####################################################
+
+/*
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::
+    Bootstrap 4 breakpoints
+*/
+
+
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {}
+
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+
+@media (min-width: 768px) {}
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px) {
+    .slider-jobs {
+        h1.title {
+            font-size: 30px;
+        }
+        &::after {
+            transform: translateX(-40%);
+        }
+    }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
+    .home-section-1 {
+        border: 1px solid red;
+    }
+    h1.title {
+        font-size: 50px;
+    }
+    .slider-jobs {
+        a.buttom {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {
+    .home-section-1 {
+        border: 1px solid blue;
+    }
+    .slider-jobs {
+        &::after {
+            transform: translateX(-65%);
+        }
+        a.buttom {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 576px) {}
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+
+
+/* Set width to make card deck cards 100% width */
+
+@media (max-width: 950px) {}
