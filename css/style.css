@@ -103,7 +103,7 @@ nav.navbar.navbar-expand-md a.nav-link:hover:after {
   bottom: 0;
 }
 
-.slider-jobs span {
+.slider-jobs span:nth-child(1) {
   font-size: 30px;
   color: #b1b1b0;
   font-weight: bold;
@@ -439,6 +439,7 @@ footer ul li {
 }
 
 .testimon-paises {
+  width: 100%;
   margin-top: 3em;
 }
 
@@ -510,9 +511,6 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 /*==========  Non-Mobile First Method  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  .slider-jobs h1.title {
-    font-size: 30px;
-  }
   .slider-jobs::after {
     -webkit-transform: translateX(-40%);
             transform: translateX(-40%);
@@ -521,9 +519,6 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
-  .home-section-1 {
-    border: 1px solid red;
-  }
   h1.title {
     font-size: 50px;
   }
@@ -533,10 +528,34 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   }
 }
 
+.navbar-toggler {
+  border: none !important;
+}
+
 /* Small Devices, Tablets */
+.swip-mobile {
+  font-size: 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: 400;
+  border-radius: 50%;
+  border: 1px solid #b1b0b0;
+  padding: 2em 1em;
+  background-color: #b1b1b0;
+  color: #fff;
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
-  .home-section-1 {
-    border: 1px solid blue;
+  .swip-mobile {
+    display: block;
+  }
+  .people-img {
+    text-align: center;
+  }
+  .people-img img {
+    max-width: 90%;
   }
   .slider-jobs::after {
     -webkit-transform: translateX(-65%);
@@ -546,9 +565,25 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     padding-left: 24px;
     padding-right: 24px;
   }
+  #collapsingNavbar > ul > li > a::after {
+    right: inherit;
+  }
+  .home-section-1 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .growing {
+    margin-top: 4em;
+  }
 }
 
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 576px) {
+  .people-img img {
+    max-width: 80%;
+  }
+}
+
 /*
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 Custom media queries

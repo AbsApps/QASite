@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" />
     <title>Accedo Services | Recruitment</title>
 
 
@@ -19,7 +20,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css?ver=1.1">
 
 
 </head>
@@ -55,7 +56,7 @@
 
     <section class="home-section-1  container">
         <div class="row flex-column-reverse flex-md-row">
-            <div class="col-12 col-md-5">
+            <div class="col-12 col-md-5 growing">
                 <div class="icon-rockect"></div>
                 <h1 class="title">Growing<br>Together</h1>
                 <p>
@@ -78,6 +79,7 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <span>01</span>
+                        <span class="swip-mobile">Swipe to<br>learn more</span>
                         <h1 class="title">Bilingual Representative</h1>
                     </div>
                 </div>
@@ -323,7 +325,71 @@
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                     <div class="card-body">
-                        Some placeholder content for the second accordion panel. This panel is hidden by default.
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="img/new home images/AboutColombia.jpg" class="img-fluid" alt="About Nicaragua">
+                                </div>
+                                <div class="col-md-6 about-paises">
+                                    <h1>About Us</h1>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                    <p>
+                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                    </p>
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet</li>
+                                        <li>Ut enim ad minim veniam, quis nostrud exercitation</li>
+                                        <li>Duis aute irure</li>
+                                        <li>Excepteur sint occaecat</li>
+                                    </ul>
+                                    <a href="#" target="_blank" class="buttom">Apply Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="testimon-paises">
+                            <div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-3 testi-img">
+                                            <img src="img/other_Images/Testimonial-2.png" class="img-fluid" alt="pic-Testim">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="title-testim">
+                                                <h2>John Doe</h2>
+                                                <span>
+                                                    Bilingual Representative, Managua, Nicaragua
+                                                </span>
+                                            </div>
+                                            <div class="testim-content">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-3 testi-img">
+                                            <img src="img/other_Images/Testimonial-2.png" class="img-fluid" alt="pic-Testim">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="title-testim">
+                                                <h2>John Doe</h2>
+                                                <span>
+                                                    Bilingual Representative, Managua, Nicaragua
+                                                </span>
+                                            </div>
+                                            <div class="testim-content">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>
@@ -374,7 +440,7 @@
                 dots: false,
                 arrows: false,
                 infinite: false,
-                autoplay: true,
+                autoplay: false,
                 autoplaySpeed: 2000,
                 speed: 300,
                 slidesToShow: 1,
@@ -409,8 +475,10 @@
             $('.testimon-paises').slick({
                 dots: true,
                 arrows: false,
-                infinite: false,
-                autoplay: true,
+                pauseOnHover: false,
+                variableWidth: true,
+                infinite: true,
+                autoplay: false,
                 autoplaySpeed: 2000,
                 speed: 300,
                 slidesToShow: 1,
