@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="./css/style.css?ver=1.1">
+    <link rel="stylesheet" href="./css/style.css">
 
 
 </head>
@@ -180,7 +180,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <span>03</span>
+                        <span>04</span>
                         <h1 class="title">Legal <br> Assistance</h1>
                     </div>
                 </div>
@@ -279,26 +279,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-3 testi-img">
-                                            <img src="img/other_Images/Testimonial-1.png" class="img-fluid" alt="pic-Testim">
-                                        </div>
-                                        <div class="col-md-9">
-                                            <div class="title-testim">
-                                                <h2>John Doe</h2>
-                                                <span>
-                                                    Bilingual Representative, Managua, Nicaragua
-                                                </span>
-                                            </div>
-                                            <div class="testim-content">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </section>
                     </div>
                 </div>
@@ -369,26 +349,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-3 testi-img">
-                                            <img src="img/other_Images/Testimonial-2.png" class="img-fluid" alt="pic-Testim">
-                                        </div>
-                                        <div class="col-md-9">
-                                            <div class="title-testim">
-                                                <h2>John Doe</h2>
-                                                <span>
-                                                    Bilingual Representative, Managua, Nicaragua
-                                                </span>
-                                            </div>
-                                            <div class="testim-content">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                           
                         </section>
                     </div>
                 </div>
@@ -436,6 +397,24 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
+
+            $('#headingOne .btn.btn-link').hover(function(){
+                $('#collapseOne').collapse('show')
+            });
+
+            // $('#headingOne').mouseleave(function(){
+            //     $('#collapseOne').collapse('hide')
+            // });
+
+            $('#headingTwo .btn.btn-link').hover(function(){
+                $('#collapseTwo').collapse('show')
+            });
+
+            // $('#headingTwo').mouseleave(function(){
+            //     $('#collapseTwo').collapse('hide')
+            // });
+
+
             $('.responsive').slick({
                 dots: false,
                 arrows: false,

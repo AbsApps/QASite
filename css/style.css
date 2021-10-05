@@ -496,6 +496,87 @@ footer ul li {
           transform: rotate(14deg);
 }
 
+section.team .yellow-bar {
+  margin: auto;
+  width: 0px;
+  height: 120px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-left: 2px solid #f9bf00;
+}
+
+div.team-caurousel,
+div.team-caurousel--desktop {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+
+div.team-caurousel div.item-carousel,
+div.team-caurousel--desktop div.item-carousel {
+  cursor: pointer;
+}
+
+div.team-caurousel div.item-carousel img,
+div.team-caurousel--desktop div.item-carousel img {
+  margin: auto;
+}
+
+div.team-caurousel.team-caurousel--movil,
+div.team-caurousel--desktop.team-caurousel--movil {
+  display: none;
+}
+
+section.login form.login-form {
+  margin-top: 100px;
+  margin-bottom: 300px;
+}
+
+section.login form.login-form span {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+section.login form.login-form p {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 32px;
+  margin-left: 80px;
+}
+
+section.login form.login-form button {
+  width: 150px;
+  height: 35px;
+  font-size: 18px;
+  border: 0;
+  border-radius: 15px;
+  background-color: #ccdc27;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 25px;
+  margin-left: 15px;
+}
+
+section.login form.login-form input {
+  border-color: #b1b1b0;
+  margin-top: 5px;
+}
+
+section.login form.login-form div.inp-content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 25px;
+}
+
+section.login .super-title h1 {
+  margin-bottom: unset;
+}
+
+section.login .super-title::after {
+  display: none;
+}
+
 /*
     ::::::::::::::::::::::::::::::::::::::::::::::::::::
     Bootstrap 4 breakpoints
