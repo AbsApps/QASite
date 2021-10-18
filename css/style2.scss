@@ -1,0 +1,601 @@
+
+@import "mixins";
+
+$base_green: #ccdc27;
+$base_skyblue: #009ce0;
+$base_yellow: #f9bf00;
+$base_gray: #3c3c3a;
+$base_gray_secondary: #b1b1b0;
+
+
+// body {
+//   background-color: #3c3c3a;
+// }
+
+
+
+// -----------------------------------------
+//  Estilos para paneles
+// -----------------------------------------
+
+.custom-panel{
+  
+    .header {
+      width: 100%;
+      max-width: 1140px;
+      margin: auto;
+      color: #fff;    
+      width: 100%;
+      height: 30px;
+      margin-bottom: 35px;
+      margin-top: 75px;
+      background-image: url(./../img/icons/icon_pencil_pc.png) ;
+      background-repeat: no-repeat;
+      background-position-y: 5px;
+      background-position-x: 12px;    
+      background-size: 62px;
+      &.header--movil {
+          display: none;
+      }
+    }
+    
+    h1, span {
+      color: $base_gray;
+    }
+    h1.title-panel {
+      font-weight: 700;
+      font-size: 30px;
+      margin-bottom: 70px;
+    }
+    
+    &.custom-panel--yellow {
+      .header {
+        background-color: $base_yellow;      
+      }    
+    }
+    &.custom-panel--green {
+      .header {
+        background-color: $base_green;      
+      }    
+    }
+  
+}
+
+
+
+
+// ----------------------------------------
+// Super Titulos
+// ----------------------------------------
+
+
+.super-title {
+    // border: 1px dotted gray;
+    margin: auto;
+    text-align: center;
+    &::before {
+        content: '';
+        display: block;
+        height: 35px;
+        width: 100%;
+        // border:1px dashed cyan;
+        background-image: url(../img/icons/smile.png);
+        background-repeat: no-repeat;    
+    }
+    &::after {
+        content: '';
+        display: block;
+        margin-top: 25px;
+        height: 35px;
+        width: 100%;
+        // border:1px dashed #009ce0;
+        background-image: url(../img/icons/three_icons.png);
+        background-repeat: no-repeat;
+        background-position:center ;
+    }
+    h1{
+        font-weight: 700;
+        font-size: 72px;
+        color: $base_gray;
+        &::after {
+        content: url(.././img/slider/yellow_dot.png);
+        display: inline;
+        padding-left: 5px;
+        }
+    }
+    span{
+        font-size: 24px;
+        color: $base_gray;
+        margin: auto;
+        font-weight: 400;
+    }
+
+    &.super-title--green {
+      &::before {
+        background-image: url(../img/icons/smile-green.png); 
+      }
+      &::after {
+        // background-image: url(../img/icons/smile-green.png); 
+        background-image: url(../img/icons/three_icons-green.png);
+      }
+      h1{
+          
+          &::after {
+            content: url(.././img/slider/green_dot.png);
+            
+          }
+      }
+      
+    }
+}
+
+
+
+
+
+
+// ----------------------------------------
+// LOGIN
+// ----------------------------------------
+
+section.login {
+	
+	
+	form.login-form {
+		margin-top: 100px;
+		margin-bottom: 300px;
+		span {
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+	
+		p {
+			font-size: 30px;
+			font-weight: bold;
+			// color: red;
+			line-height: 32px;
+			margin-left: 80px;
+		}
+		button {
+			width: 150px;
+			height: 35px;
+			font-size: 18px;
+			border: 0;
+			border-radius: 15px;
+			background-color: $base_green;
+			color: #fff;
+			font-weight: bold;
+			cursor: pointer	;
+			margin-top: 25px;
+			margin-left: 15px;
+		}
+		input {
+			
+			border-color: #b1b1b0;
+			margin-top: 5px;
+		}
+		div.inp-content {
+			
+			box-sizing: border-box;
+			padding-left: 25px;
+		}
+		
+	}
+	.super-title {
+		h1{
+			margin-bottom: unset;
+		}
+		&::after {			
+			display: none;			
+		}
+	}
+}
+
+
+
+
+// ----------------------------------------
+// Referral Program / Slider
+// ----------------------------------------
+section.team  {
+  .yellow-bar {
+      margin: auto;
+      width: 0px;
+      height: 120px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      border-left: 2px solid $base_yellow;
+  }
+}
+
+
+div.team-caurousel,
+div.team-caurousel--desktop {
+  // border: 1px solid red;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  overflow: hidden;
+  div.item-carousel {
+      cursor: pointer;
+      img {
+          margin: auto;
+      }
+  }
+  &.team-caurousel--movil {
+      display: none;
+  }
+}
+
+
+
+
+
+//-----------------------------------------------------
+//          Estilos para los botones
+//-----------------------------------------------------
+
+
+ 
+button.buttom, 
+.buttom {
+	border: none;
+    padding: 15px;
+    /*espacio alrededor texto*/
+    
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: $base_gray_secondary;
+    /*color botón*/
+    color: #ffffff;
+    /*color texto*/
+    text-decoration: none;
+    /*decoración texto*/
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 50px;
+    /*bordes redondos*/
+    transition: all 0.1s;
+    &:hover {
+        color: #fff;
+        text-decoration: unset;
+        box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
+        -webkit-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
+    }
+    &.button--yellow {
+        background-color: $base_yellow;
+    }
+    &.button--green {
+      background-color: $base_green;
+    }
+  }
+
+
+
+
+  label.upload-cotrol {
+    cursor: pointer;
+    width: 100%;
+    height: 37px;
+    border: 1px solid $base_gray_secondary;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    color: $base_gray;
+    transition: all .5s;
+    padding: 5px;
+    box-sizing: border-box;
+    
+    &:hover {
+      color: #fff;
+      font-weight: bold;
+      background-color: $base_gray_secondary;
+    }
+  }
+
+
+  input[type="file"] {
+      &.upload-cotrol {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+      }
+  }
+
+  
+
+
+
+// ----------------------------------------
+// Apply
+// ----------------------------------------
+
+section.apply-form {
+  div  > span {
+    font-weight: bold;
+
+  }  
+  div > h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+
+  .access-info div > .form-control {
+      // background-color: red;
+      min-width: 256px;
+      
+  }
+
+}
+
+
+
+
+
+
+.bar-green {
+  margin: auto;
+  width: 0px;
+  height: 120px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-left: 2px solid $base_green;
+}
+
+
+
+//--------------------------------------
+//            Switch
+//--------------------------------------
+
+.switch-button {  
+  display: inline-block;
+  
+
+  .switch-button__checkbox {    
+    display: none;
+  }
+
+  .switch-button__label {
+    cursor: pointer;
+    // background-color: red;
+    // width: 164px;
+    width: 10rem;
+    height: 37px;
+    border-radius: 12rem;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    &::after {
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      //------------
+      content: 'No';
+      display: block;
+      float: right;
+      // Manipulando ubicacion de el texto
+      box-sizing: border-box;
+      padding: 5px;
+      margin-right: 25px;
+
+    }
+    &::before {
+      
+      transition: .2s;
+      display: block;
+      position: absolute;
+      width: 5rem;      
+      height: 37px;
+      background-color: $base_green;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      content: 'Yes';
+      border-right: 3.5px solid #fff ;
+      
+
+      // Manipulando ubicacion de el texto
+      box-sizing: border-box;
+      padding: 5px;
+      text-align: center;
+      
+      
+    }
+  }
+
+
+  .switch-button__checkbox + .switch-button__label {    
+    background-color: #e3eb99;        
+  }
+
+
+  // ----------------------------------------------
+  // Estas linea son para manipular los estilos 
+  // cuando se hace click 
+  // ----------------------------------------------
+  .switch-button__checkbox:checked + .switch-button__label:before {
+      transform: translateX(5rem);      
+      content: 'No';
+      border-left: 3.5px solid #fff ;
+      border-right: unset;
+  }
+    
+  
+  // Invirtiendo after: No a Yes  
+  .switch-button__checkbox:checked + .switch-button__label:after { 
+    content: 'Yes';    
+    display: block;
+    float: left;    
+    margin-left: 25px;
+    margin-right: unset;
+  }
+
+
+}
+
+
+
+// ####################################################
+// M E D I A  Q U E R I E S
+// ####################################################
+
+/*
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::
+    Bootstrap 4 breakpoints
+*/
+
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+    .slider-jobs {
+    h1.title {
+        font-size: 30px;
+    }
+    &::after {
+        transform: translateX(-40%);
+    }
+}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+
+
+  h1.title {
+      font-size: 50px;
+  }
+
+  .slider-jobs {
+      background-position-x: -190px;
+      a.buttom {
+      padding-left: 24px;
+      padding-right: 24px;
+      }
+  }
+
+  section.referral {        
+      div > img {
+          margin-top: 60px;
+      }
+  }
+
+  div.team-caurousel {        
+      &.team-caurousel--movil {
+      display: unset;
+      }
+  }
+  div.team-caurousel--desktop {
+      display: none; 
+  }
+
+
+
+  section.login {
+    
+    form.login-form {
+      margin-top: 50px;
+      p {            
+        margin-left: unset;
+      }    
+    }
+  }
+
+
+  section.apply-form {  
+    .access-info div > .form-control {      
+        min-width: 100%;        
+    }
+  }
+  
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  
+    
+    .custom-panel {    
+        .header {
+            display: none;        
+            &.header--movil {
+                display: block;
+            }
+        }
+    }
+
+    .super-title {
+        margin-bottom: 50px;
+        h1 {
+            font-size: 48px;
+        }
+        span {
+            font-size: 16px;
+        }
+        
+    }
+
+	section.login {
+		
+		form.login-form {
+			margin-top: 50px;
+			p {            
+				margin-left: unset;
+			}
+			button {
+				margin: auto;
+				margin-top: 25px;							
+			}
+			div.inp-content {
+				padding-left: unset;
+			}
+		}
+	}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 576px) {
+
+ 
+
+}
+
+/*
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::
+    Custom media queries
+*/
+
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) {
+
+}
+

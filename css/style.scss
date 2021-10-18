@@ -7,6 +7,8 @@ $base_skyblue: #009ce0;
 $base_yellow: #f9bf00;
 $base_gray: #3c3c3a;
 $base_gray_secondary: #b1b1b0;
+
+
 *,
 html {
     font-family: "Mulish", sans-serif;
@@ -232,30 +234,30 @@ nav.navbar.navbar-expand-md {
 }
 
 // Estilos para los botones
-.buttom {
-    padding: 15px;
-    /*espacio alrededor texto*/
-    padding-left: 40px;
-    padding-right: 40px;
-    background-color: $base_gray_secondary;
-    /*color botón*/
-    color: #ffffff;
-    /*color texto*/
-    text-decoration: none;
-    /*decoración texto*/
-    font-size: 17px;
-    font-weight: 700;
-    border-radius: 50px;
-    /*bordes redondos*/
-    transition: all 0.1s;
-    &:hover {
-        color: #fff;
-        text-decoration: unset;
-        box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
-        -webkit-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
-        -moz-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
-    }
-}
+// .buttom {
+//     padding: 15px;
+//     /*espacio alrededor texto*/
+//     padding-left: 40px;
+//     padding-right: 40px;
+//     background-color: $base_gray_secondary;
+//     /*color botón*/
+//     color: #ffffff;
+//     /*color texto*/
+//     text-decoration: none;
+//     /*decoración texto*/
+//     font-size: 17px;
+//     font-weight: 700;
+//     border-radius: 50px;
+//     /*bordes redondos*/
+//     transition: all 0.1s;
+//     &:hover {
+//         color: #fff;
+//         text-decoration: unset;
+//         box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
+//         -webkit-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
+//         -moz-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
+//     }
+// }
 
 footer {
     background-color: $base_skyblue;
@@ -265,6 +267,12 @@ footer {
     border-top: 7px solid #009ce0;
     div.d-flex.flex-column {
         margin: auto;
+    }
+
+    a{
+        &:hover {
+            text-decoration: none;
+        }
     }
     img {
         margin: auto;
@@ -454,6 +462,97 @@ footer {
         transform: rotate(14deg);
     }
 }
+
+
+// ----------------------------------------
+// Referral Program / Slider
+// ----------------------------------------
+// section.team  {
+//     .yellow-bar {
+//         margin: auto;
+//         width: 0px;
+//         height: 120px;
+//         margin-top: 50px;
+//         margin-bottom: 50px;
+//         border-left: 2px solid $base_yellow;
+//     }
+// }
+
+
+// div.team-caurousel,
+// div.team-caurousel--desktop {
+//     // border: 1px solid red;
+//     margin-top: 80px;
+//     margin-bottom: 80px;
+//     overflow: hidden;
+//     div.item-carousel {
+//         cursor: pointer;
+//         img {
+//             margin: auto;
+//         }
+//     }
+//     &.team-caurousel--movil {
+//         display: none;
+//     }
+// }
+
+// ----------------------------------------
+// LOGIN
+// ----------------------------------------
+
+// section.login {
+	
+	
+// 	form.login-form {
+// 		margin-top: 100px;
+// 		margin-bottom: 300px;
+// 		span {
+// 			font-weight: bold;
+// 			margin-bottom: 10px;
+// 		}
+	
+// 		p {
+// 			font-size: 30px;
+// 			font-weight: bold;
+// 			// color: red;
+// 			line-height: 32px;
+// 			margin-left: 80px;
+// 		}
+// 		button {
+// 			width: 150px;
+// 			height: 35px;
+// 			font-size: 18px;
+// 			border: 0;
+// 			border-radius: 15px;
+// 			background-color: $base_green;
+// 			color: #fff;
+// 			font-weight: bold;
+// 			cursor: pointer	;
+// 			margin-top: 25px;
+// 			margin-left: 15px;
+// 		}
+// 		input {
+			
+// 			border-color: #b1b1b0;
+// 			margin-top: 5px;
+// 		}
+// 		div.inp-content {
+			
+// 			box-sizing: border-box;
+// 			padding-left: 25px;
+// 		}
+		
+// 	}
+// 	.super-title {
+// 		h1{
+// 			margin-bottom: unset;
+// 		}
+// 		&::after {			
+// 			display: none;			
+// 		}
+// 	}
+// }
+
 
 // ####################################################
 // M E D I A  Q U E R I E S

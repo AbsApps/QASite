@@ -245,33 +245,6 @@ nav.navbar.navbar-expand-md a.nav-link:hover:after {
   background-color: #f9bf00;
 }
 
-.buttom {
-  padding: 15px;
-  /*espacio alrededor texto*/
-  padding-left: 40px;
-  padding-right: 40px;
-  background-color: #b1b1b0;
-  /*color botón*/
-  color: #ffffff;
-  /*color texto*/
-  text-decoration: none;
-  /*decoración texto*/
-  font-size: 17px;
-  font-weight: 700;
-  border-radius: 50px;
-  /*bordes redondos*/
-  -webkit-transition: all 0.1s;
-  transition: all 0.1s;
-}
-
-.buttom:hover {
-  color: #fff;
-  text-decoration: unset;
-  box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
-  -webkit-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
-  -moz-box-shadow: 2px 2px 5px -1px rgba(0, 0, 0, 0.38);
-}
-
 footer {
   background-color: #009ce0;
   color: #fff;
@@ -282,6 +255,10 @@ footer {
 
 footer div.d-flex.flex-column {
   margin: auto;
+}
+
+footer a:hover {
+  text-decoration: none;
 }
 
 footer img {
