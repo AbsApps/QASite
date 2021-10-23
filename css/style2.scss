@@ -18,9 +18,10 @@ $base_gray_secondary: #b1b1b0;
 //  Estilos para paneles
 // -----------------------------------------
 
-.custom-panel{
+.custom-panel {
   
     .header {
+      
       width: 100%;
       max-width: 1140px;
       margin: auto;
@@ -29,11 +30,30 @@ $base_gray_secondary: #b1b1b0;
       height: 30px;
       margin-bottom: 35px;
       margin-top: 75px;
-      background-image: url(./../img/icons/icon_pencil_pc.png) ;
-      background-repeat: no-repeat;
-      background-position-y: 5px;
-      background-position-x: 12px;    
-      background-size: 62px;
+      position: relative;
+      // background-image: url(./../img/icons/icon_pencil_pc.png) ;
+      // background-repeat: no-repeat;
+      // background-position-y: 5px;
+      // background-position-x: 12px;    
+      // background-size: 62px;
+      &::before {
+        // border: 1px solid red;
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        display: block;
+        height: 30px;
+        width: 100px;
+        
+        margin-left: 15px;
+        background-image: url(./../img/icons/icon_pencil_pc.png) ;
+        background-repeat: no-repeat;    
+        background-position-y: bottom;
+        background-position-y: left;
+    }
+      
+
+      background-position-x: right;
       &.header--movil {
           display: none;
       }
@@ -51,11 +71,13 @@ $base_gray_secondary: #b1b1b0;
     &.custom-panel--yellow {
       .header {
         background-color: $base_yellow;      
+        background-image: url(../img/panels/head_yellow.png);
       }    
     }
     &.custom-panel--green {
       .header {
         background-color: $base_green;      
+        background-image: url(../img/panels/head_green.png);
       }    
     }
   
@@ -197,6 +219,22 @@ section.login {
 // ----------------------------------------
 // Referral Program / Slider
 // ----------------------------------------
+
+section.referral {
+  div > label {
+    font-weight: bold;
+  }
+
+  div > .form-control {
+    border-color: #b1b1b0 ;
+  }
+  div > .buttom.button--yellow {
+    min-width: 165px;
+    height: 50px;
+    padding: unset;
+  }
+}
+
 section.team  {
   .yellow-bar {
       margin: auto;
@@ -502,9 +540,15 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   }
 
   section.referral {        
-      div > img {
-          margin-top: 60px;
-      }
+    div > img {
+        margin-top: 60px;
+    }
+
+    // div >  label {
+    //   font-weight: bold;
+    // }
+
+
   }
 
   div.team-caurousel {        

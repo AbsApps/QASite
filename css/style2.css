@@ -8,11 +8,22 @@
   height: 30px;
   margin-bottom: 35px;
   margin-top: 75px;
+  position: relative;
+  background-position-x: right;
+}
+
+.custom-panel .header::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  display: block;
+  height: 30px;
+  width: 100px;
+  margin-left: 15px;
   background-image: url(./../img/icons/icon_pencil_pc.png);
   background-repeat: no-repeat;
-  background-position-y: 5px;
-  background-position-x: 12px;
-  background-size: 62px;
+  background-position-y: bottom;
+  background-position-y: left;
 }
 
 .custom-panel .header.header--movil {
@@ -31,10 +42,12 @@
 
 .custom-panel.custom-panel--yellow .header {
   background-color: #f9bf00;
+  background-image: url(../img/panels/head_yellow.png);
 }
 
 .custom-panel.custom-panel--green .header {
   background-color: #ccdc27;
+  background-image: url(../img/panels/head_green.png);
 }
 
 .super-title {
@@ -141,6 +154,20 @@ section.login .super-title h1 {
 
 section.login .super-title::after {
   display: none;
+}
+
+section.referral div > label {
+  font-weight: bold;
+}
+
+section.referral div > .form-control {
+  border-color: #b1b1b0;
+}
+
+section.referral div > .buttom.button--yellow {
+  min-width: 165px;
+  height: 50px;
+  padding: unset;
 }
 
 section.team .yellow-bar {

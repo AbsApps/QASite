@@ -19,7 +19,7 @@ var commons = {};
     if ($(".team-caurousel")) {
       $(".team-caurousel").slick({
         dots: false,
-        arrows: true,
+        arrows: false,
         infinite: false,
         autoplay: true,
         autoplaySpeed: 2000,
