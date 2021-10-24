@@ -260,6 +260,41 @@ section.login .super-title::after {
   display: none;
 }
 
+section.login-avatar div > .super-title {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+section.login-avatar div > .super-title::after {
+  content: unset;
+}
+
+section.login-avatar .login-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+section.login-avatar .panel-buttons {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+section.login-avatar .panel-buttons .buttom {
+  margin-left: 20px;
+}
+
 section.referral div > label {
   font-weight: bold;
 }
@@ -343,6 +378,18 @@ button.buttom.button--yellow,
 button.buttom.button--green,
 .buttom.button--green {
   background-color: #ccdc27;
+}
+
+button.buttom.button--red,
+.buttom.button--red {
+  background-color: #e8232d;
+}
+
+button.buttom.buttom-sm,
+.buttom.buttom-sm {
+  height: 36px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 label.upload-cotrol {
@@ -623,6 +670,20 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   }
   section.jobs table.custom-table {
     margin-bottom: 80px;
+  }
+  section.login-avatar .login-avatar--form .buttom {
+    margin: auto;
+    margin-top: 20px;
+    width: 200px;
+  }
+  section.login-avatar .login-avatar--form label.upload-cotrol {
+    margin-top: 30px;
+  }
+  section.login-avatar .panel-buttons {
+    overflow-x: auto;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 

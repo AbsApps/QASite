@@ -3,6 +3,7 @@
 $base_green: #ccdc27;
 $base_skyblue: #009ce0;
 $base_yellow: #f9bf00;
+$base_red: #e8232d;
 $base_gray: #3c3c3a;
 $base_gray_secondary: #b1b1b0;
 
@@ -298,6 +299,33 @@ section.login {
 	}
 }
 
+section.login-avatar {
+	div > .super-title {
+		margin-top: 100px;
+		margin-bottom: 100px;
+		&::after {
+			content: unset;
+		}
+	}
+	.login-title {
+		font-size: 30px;
+		font-weight: bold;
+	}
+
+	.panel-buttons {
+		// border: 1px solid red;
+		margin-bottom: 30px;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: stretch;
+		
+		.buttom {
+			margin-left: 20px;
+		}
+	}
+}
+
 // ----------------------------------------
 // Referral Program / Slider
 // ----------------------------------------
@@ -380,6 +408,15 @@ button.buttom,
 	}
 	&.button--green {
 		background-color: $base_green;
+	}
+	&.button--red {
+		background-color: $base_red;
+	}
+
+	&.buttom-sm {
+		height: 36px;
+		padding-top: 5px;
+		padding-bottom: 5px;
 	}
 }
 
@@ -566,12 +603,11 @@ section.jobs {
 			// }
 
 			li.page-item {
-				
 				&.active {
 					a.page-link {
 						background-color: $base_skyblue;
 						color: #fff;
-					}	
+					}
 				}
 
 				a.page-link {
@@ -586,8 +622,6 @@ section.jobs {
 						font-weight: bold;
 					}
 				}
-				
-				
 			}
 		}
 	}
@@ -726,6 +760,42 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 	section.jobs {
 		table.custom-table {
 			margin-bottom: 80px;
+		}
+	}
+
+	section.login-avatar {
+		// div > .super-title {
+		// 	margin-top: 100px;
+		// 	margin-bottom: 100px;
+		// 	&::after {
+		// 		content: unset;
+		// 	}
+		// }
+		// .login-title {
+		// 	font-size: 30px;
+		// 	font-weight: bold;
+		// }
+
+		.login-avatar--form {
+			.buttom {
+				margin: auto;
+				margin-top: 20px;
+				width: 200px;
+			}
+			label.upload-cotrol {
+				margin-top: 30px;
+			}
+		}
+
+		.panel-buttons {
+			// border: 1px solid red;
+			overflow-x:auto;
+			justify-content: flex-start;
+			
+			// .buttom {
+			// 	margin: unset;
+			// 	margin-bottom: 10px;
+			// }
 		}
 	}
 }
