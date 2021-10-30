@@ -135,6 +135,26 @@
   font-weight: bold;
 }
 
+.header-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-bar div.divider-green {
+  max-width: 850px;
+}
+
 .super-title {
   margin: auto;
   text-align: center;
@@ -260,6 +280,10 @@ section.login .super-title::after {
   display: none;
 }
 
+/*---------------------------------------------------*/
+/*     Estos estilos son para las paginas    		 */
+/*	----   Login Referral y Login Avatar ----        */
+/*---------------------------------------------------*/
 section.login-avatar div > .super-title {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -275,7 +299,7 @@ section.login-avatar .login-title {
 }
 
 section.login-avatar .panel-buttons {
-  margin-bottom: 30px;
+  margin-bottom: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -293,6 +317,60 @@ section.login-avatar .panel-buttons {
 
 section.login-avatar .panel-buttons .buttom {
   margin-left: 20px;
+}
+
+section.login-avatar div.divider-green {
+  width: 100%;
+  height: 20px;
+  background-color: #ccdc27;
+  background-image: url(../img/slider/green_bar.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+section.login-avatar table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 0 1px #b1b1b0;
+          box-shadow: 0 0 0 1px #b1b1b0;
+  /* this draws the table border  */
+  overflow: hidden;
+}
+
+section.login-avatar table tr {
+  height: 39px;
+}
+
+section.login-avatar table tr th {
+  font-weight: bold;
+}
+
+section.login-avatar table tr th,
+section.login-avatar table tr td {
+  padding: 6px;
+}
+
+section.login-avatar table tr th:first-child,
+section.login-avatar table tr td:first-child {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 20px;
+}
+
+section.login-avatar table tr th:last-child,
+section.login-avatar table tr td:last-child {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 20px;
+}
+
+section.login-avatar table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+section.login-avatar table tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
 section.referral div > label {
