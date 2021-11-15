@@ -131,6 +131,7 @@
 }
 
 .custom-table.custom-table--blue tr > td:first-child {
+  cursor: pointer;
   color: #009ce0;
   font-weight: bold;
 }
@@ -153,6 +154,39 @@
 
 .header-bar div.divider-green {
   max-width: 850px;
+}
+
+div.custom-modal div.modal-body {
+  padding: 2rem;
+}
+
+div.custom-modal div.modal-body h2,
+div.custom-modal div.modal-body p,
+div.custom-modal div.modal-body div.custom-head {
+  margin-bottom: 25px;
+}
+
+div.custom-modal div.modal-body p {
+  font-size: 16px;
+}
+
+div.custom-modal div.modal-body div.custom-head {
+  background-image: url(../img/panels/head_blue.png);
+  background-position-x: right;
+  width: 100%;
+  height: 30px;
+  position: relative;
+}
+
+div.custom-modal div.modal-body div.custom-head::before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 100px;
+  background-image: url(./../img/icons/icon_pencil_pc.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-y: left;
 }
 
 .super-title {
@@ -461,6 +495,11 @@ button.buttom.button--green,
 button.buttom.button--red,
 .buttom.button--red {
   background-color: #e8232d;
+}
+
+button.buttom.button--blue,
+.buttom.button--blue {
+  background-color: #009ce0;
 }
 
 button.buttom.buttom-sm,
