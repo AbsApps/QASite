@@ -5,29 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" />
     <title>Accedo Services | Recruitment</title>
 
 
     <!-- Libs -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,600&display=swap"
+        rel="stylesheet">
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/style2.css">
 
 
+
+
+    <!-- Documentacion para animaciones: https://michalsnik.github.io/aos/ -->
+    <!-- <link href="css/aos.css" rel="stylesheet"> -->
+
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-light  ">
+    <nav class="navbar navbar-expand-md navbar-light">
         <div class="container">
             <a class="navbar-brand abs" href="./index.html">
                 <img src="./img/logo.png" alt="">
@@ -39,191 +48,187 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="./jobs.html" >Jobs</a>
+                        <a class="nav-link" href="./jobs.html">Jobs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./referral-programas.html" >Referral
+                        <a class="nav-link" href="./referral-programas.html">Referral
                             Program</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./login.html" >Login</a>
+
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Login
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="https://alc-cali.accedotechnologies.com/">Cali</a>
+                            <a class="dropdown-item" href="https://alc-bta.accedotechnologies.com/ ">Bogota</a>
+                            <a class="dropdown-item" href="https://alc-bga.accedotechnologies.com/ ">Bucaramanga</a>
+                            <a class="dropdown-item" href="https://alc-nic.accedotechnologies.com/ ">Managua</a>
+                            <a class="dropdown-item" href="https://alc-pei.accedotechnologies.com/">Pereira</a>
+                        </div>
                     </li>
                 </ul>
-
             </div>
         </div>
     </nav>
-    
-    <section class="apply-form  custom-panel custom-panel--green mb-5">
+
+
+
+
+
+    <section data-aos="fade-up" class="apply-form  custom-panel custom-panel--green mb-5">
         <div class="header header--movil"></div>
         <div class="container">
             <div class="header"></div>
+
             <div class="row">
-                <div class="col-12 mb-5">
-                    <h1>Access<br>Information</h1>
-                </div>
-            </div>
-            
-            <div class="row access-info">
-                <div class="col-1"></div>
-                <div class="col-12 col-md-10" >                    
-                    <div class="d-flex flex-md-row flex-column  justify-content-center">                        
-                        <div class="form-group    p-md-2">                    
-                            <span>Email </span>                        
-                            <input type="text" class="form-control" >
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="location ">
+                            <a href="#">Cali</a>
+                            <a href="#">Bogota</a>
+                            <a href="#">Bucaramanga</a>
+                            <a href="#">Managua</a>
+                            <a href="#">Pereira</a>
                         </div>
-                        <div class="form-group    p-md-2">                    
-                            <span>Password </span>                        
-                            <input type="text" class="form-control" >
-                        </div>
-                        <div class="form-group    p-md-2">                    
-                            <span>Confirm Password </span>                        
-                            <input type="text" class="form-control" >
+
+                        <div class="language">
+                            <a href="#">En</a>
+                            <a href="#">Es</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-1"></div>
-                
             </div>
-            
-        </div>
-    </section>
 
-    <section class="apply-form">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 mb-5">
-                    <h1>Personal <br>Information</h1>
+
+            <div class="row mt-4">
+                <div class="col-10 offset-md-1">
+                    <h1>You Are Applying to the Site: <span>Managua</span></h1>
                 </div>
             </div>
 
+
             <div class="row">
-                <div class="col-1"></div>
-                <div class="col-12 col-md-5">
-                    <div class="form-group">                    
-                        <span>Email* </span>
-                        
-                        <input type="text" class="form-control" >
-                    </div>
-                </div>
-                <div class="col-12 col-md-5">
+
+                <div class="col-12 col-md-5 offset-md-1">
                     <div class="form-group">
-                        <span>Site you are applying for *</span>                        
-                        <select class="form-control">
-                            <option  value="0" disabled selected>Please Choose one</option>
+                        <label for="txt1">Full Name</label>
+                        <input type="text" class="form-control" id="txt1" placeholder="">
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="form-group">
+                        <label for="txt2">Phone</label>
+                        <input type="text" class="form-control" id="txt2" placeholder="">
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="form-group">
+                        <label for="">Gender</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-6 col-md-5 offset-md-1">
+                    <div class="form-group">
+                        <label for="txt3">Identification</label>
+                        <input type="text" class="form-control" id="txt3" placeholder="">
+                    </div>
+                </div>
+                <div class="col-6 col-md-5">
+                    <div class="form-group">
+                        <label for="txt4">Email</label>
+                        <input type="text" class="form-control" id="txt4" placeholder="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 col-md-5 offset-md-1">
+                    <div class="form-group">
+                        <label for="txt5">City of residence</label>
+                        <input type="text" class="form-control" id="txt5" placeholder="">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-5 col-6 offset-md-1">
+                    <div class="form-group">
+                        <label for="txt6">What Is Your Availability to Work?</label>
+                        <select id="txt6" class="form-control">
+                            <option selected disabled value="Please Choose One">Please Choose One</option>
+                            <option value="">loremp 2</option>
                         </select>
                     </div>
                 </div>
-                <div class="col-1"></div>
+                <div class="col-md-5 col-6 ">
+                    <div class="form-group">
+                        <label for="txt7">Hours You Prefer to Be Contacted</label>
+                        <input type="text" class="form-control" id="txt7" placeholder="7am - 12pm">
+                    </div>
+                </div>
+
             </div>
 
             <div class="row">
-                <div class="col-1"></div>
-                <div class="col-12 col-md-5">
+
+                <div class="col-md-5 col-6 offset-md-1 ">
                     <div class="form-group">
-                        <span>How did you find out about the position? *</span>                        
-                        <select class="form-control">
-                            <option  value="0" disabled selected>Please Choose one</option>
+                        <label for="txt8">Work From Home? or Work From Office?</label>
+                        <select id="txt8" class="form-control">
+                            <option selected disabled value="Please Choose One">Please Choose One</option>
+                            <option value="">loremp 2</option>
                         </select>
                     </div>
                 </div>
-                <div class="col-12 col-md-5">
-                    <div class="form-group">                    
-                        <span>Desired Job Title *</span>                        
-                        <input type="text" class="form-control" >
+                <div class="col-md-5 col-6 ">
+                    <div class="form-group">
+                        <label for="txt9">How Would You Rate Your English Level?</label>
+                        <select id="txt9" class="form-control">
+                            <option selected disabled value="Please Choose One">Please Choose One</option>
+                            <option value="">loremp 2</option>
+                        </select>
                     </div>
                 </div>
-                <div class="col-1"></div>
+
             </div>
             <div class="row">
-                <div class="col-1"></div>
-                <div class="col-12 col-md-5">
-                    <div class="form-group">                    
-                        <span>First Name *</span>                        
-                        <input type="text" class="form-control" >
-                    </div>
+                <div class="col-12">
+                    <input type="checkbox">
+                    <span>I Agree Terms And Conditions</span>
                 </div>
-                <div class="col-12 col-md-5">
-                    <div class="form-group">                    
-                        <span>Last Name *</span>                        
-                        <input type="text" class="form-control" >
-                    </div>
+                <div class="col-12 text-center">
+                    <button class="buttom button--green mt-4">Submit</button>
                 </div>
-                <div class="col-1"></div>
             </div>
-            <div class="row">
-                <div class="col-1"></div>
-                <div class="col-12 col-md-5">
-                    <div class="form-group">                    
-                        <span>Telephone *</span>                        
-                        <input type="text" class="form-control" >
-                    </div>
-                </div>
-                
-            </div>
-            
-            <!-- <div class="row">
-                <div class="col-1"></div>
-                <duv class="col-12 col-md-5"></duv>
-            </div> -->
 
-
-            <!-- /////////////////////////      Switch CONTROLS        /////////////////////////-->
-            <div class="row">
-                <div class="col-1"></div>
-                <div class="col-12 col-md-5">
-                    <span>Did You Work Before in Accedo? *</span>
-                    <br>
-                    <div class="switch-button">
-                        <!-- Checkbox -->
-                        <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
-                        <!-- Botón -->
-                        <label for="switch-label" class="switch-button__label"></label>
-                    </div>
-                </div>                
-                <div class="col-12 col-md-5">
-                    <span>Have You Worked in a Call Center Before? *</span>
-                    <br>
-                    <div class="switch-button">
-                        <!-- Checkbox -->
-                        <input type="checkbox" name="switch-button2" id="switch-label2" class="switch-button__checkbox">
-                        <!-- Botón -->
-                        <label for="switch-label2" class="switch-button__label"></label>
-                    </div>
-                </div>   
-                <div class="col-1"></div>             
-            </div>
-            <!-- /////////////////////////      END Switch CONTROLS        /////////////////////////-->
-
-            <div class="row mt-2">
-                <div class="col-1"></div>
-                <div class="col-12 col-md-5">
-                    <span>Upload a Resume</span>
-                    <br>
-                    <label for="fileUpload1" class="upload-cotrol"> Choose File</label>
-                    <input type="file" name="fileUpload1" id="" class="upload-cotrol">
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-12 ">
-                    <br>
-                    <div class="d-flex justify-content-center ">                        
-                        <button class="buttom button--green">Submit</button>                        
-                    </div>
-                </div>                
-            </div>
 
         </div>
     </section>
 
-    <section >
+
+
+
+
+
+    <section data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="bar-vertical bar-vertical--green"></div>
                 </div>
             </div>
-            <div class="row mb-5">                
+            <div class="row mb-5">
                 <div class="super-title super-title--green ">
                     <h1>Thank You</h1>
                     <span>An Accedo Representative should be in contact <br> as soon as possible</span>
@@ -231,6 +236,10 @@
             </div>
         </div>
     </section>
+
+
+
+
 
 
     <footer>
@@ -262,16 +271,21 @@
 
 
     <!-- Libs -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
-        crossorigin="anonymous"></script>    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" 
-        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" 
-        src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-  
+
+
+    <!-- <script src="js/aos.js"></script> -->
+    <script>
+        // AOS.init();
+    </script>
+
 </body>
 
 </html>

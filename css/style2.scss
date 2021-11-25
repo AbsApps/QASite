@@ -567,10 +567,79 @@ section.apply-form {
 	div .form-group > .form-control {
 		border-color: $base_gray_secondary;
 	}
-
-	.access-info div > .form-control {
-		min-width: 256px;
+	div.header.header--movil {
+		margin-bottom: 15px;
 	}
+	div {
+		div.form-group {
+			margin-bottom: 25px;
+			label {
+				font-weight: bold;
+			}
+		}
+
+		div.header {
+			margin-bottom: 10px;
+		}
+		div.location {
+			display: flex;
+			flex-direction: row;
+			// OVERFLOW SNAP
+			overflow-x: auto;
+			scroll-snap-type: x mandatory;
+			a {
+				scroll-snap-align: start;
+				// scroll-snap-align: center;
+				text-decoration: unset;
+				padding-right: 45px;
+				color: $base_gray;
+				font-size: 16px;
+				font-weight: bold;
+				transition: 0.5s;
+
+				&::after {
+					content: "";
+					display: block;
+					max-width: 55%;
+					border-bottom: 3px solid rgba(255, 255, 255, 0);
+					transition: 0.5s;
+				}
+
+				&:focus,
+				&:hover {
+					color: $base_green;
+					&::after {
+						border-bottom: 3px solid $base_green;
+					}
+				}
+			}
+		}
+		div.language {
+			// border: 1px solid red;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			font-size: 27px;
+			a {
+				padding-left: 4px;
+				padding-right: 4px;
+				color: $base_gray_secondary;
+				font-weight: bold;
+				text-decoration: unset;
+				border-right: 3px solid $base_green;
+				&:last-child {
+					border: unset;
+				}
+				&:focus,
+				&:hover {
+					color: $base_gray;
+				}
+			}
+		}
+	}
+	// .access-info div > .form-control {
+	// 	min-width: 256px;
+	// }
 }
 
 .bar-vertical {
@@ -891,6 +960,22 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 			// .buttom {
 			// 	margin: unset;
 			// 	margin-bottom: 10px;
+			// }
+		}
+	}
+
+	section.apply-form {
+		div {
+			div.location {
+				margin-right: 20px;
+				a {
+					padding-right: 25px;
+					padding-left: 25px;
+				}
+			}
+			// div.language {
+			// 	a {
+			// 	}
 			// }
 		}
 	}

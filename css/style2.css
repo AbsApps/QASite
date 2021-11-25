@@ -553,8 +553,92 @@ section.apply-form div .form-group > .form-control {
   border-color: #b1b1b0;
 }
 
-section.apply-form .access-info div > .form-control {
-  min-width: 256px;
+section.apply-form div.header.header--movil {
+  margin-bottom: 15px;
+}
+
+section.apply-form div div.form-group {
+  margin-bottom: 25px;
+}
+
+section.apply-form div div.form-group label {
+  font-weight: bold;
+}
+
+section.apply-form div div.header {
+  margin-bottom: 10px;
+}
+
+section.apply-form div div.location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+section.apply-form div div.location a {
+  scroll-snap-align: start;
+  text-decoration: unset;
+  padding-right: 45px;
+  color: #3c3c3a;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+section.apply-form div div.location a::after {
+  content: "";
+  display: block;
+  max-width: 55%;
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+section.apply-form div div.location a:focus, section.apply-form div div.location a:hover {
+  color: #ccdc27;
+}
+
+section.apply-form div div.location a:focus::after, section.apply-form div div.location a:hover::after {
+  border-bottom: 3px solid #ccdc27;
+}
+
+section.apply-form div div.language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 27px;
+}
+
+section.apply-form div div.language a {
+  padding-left: 4px;
+  padding-right: 4px;
+  color: #b1b1b0;
+  font-weight: bold;
+  text-decoration: unset;
+  border-right: 3px solid #ccdc27;
+}
+
+section.apply-form div div.language a:last-child {
+  border: unset;
+}
+
+section.apply-form div div.language a:focus, section.apply-form div div.language a:hover {
+  color: #3c3c3a;
 }
 
 .bar-vertical {
@@ -801,6 +885,13 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+  section.apply-form div div.location {
+    margin-right: 20px;
+  }
+  section.apply-form div div.location a {
+    padding-right: 25px;
+    padding-left: 25px;
   }
 }
 

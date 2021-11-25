@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" />
     <title>Accedo Services | Recruitment</title>
 
 
@@ -31,9 +32,8 @@
 </head>
 
 <body>
-
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-light  ">
+    <nav class="navbar navbar-expand-md navbar-light">
         <div class="container">
             <a class="navbar-brand abs" href="./index.html">
                 <img src="./img/logo.png" alt="">
@@ -45,14 +45,26 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="./jobs.html" >Jobs</a>
+                        <a class="nav-link" href="./jobs.html">Jobs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./referral-programas.html" >Referral
+                        <a class="nav-link" href="./referral-programas.html">Referral
                             Program</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./login.html" >Login</a>
+
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Login
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="https://alc-cali.accedotechnologies.com/">Cali</a>
+                            <a class="dropdown-item" href="https://alc-bta.accedotechnologies.com/ ">Bogota</a>
+                            <a class="dropdown-item" href="https://alc-bga.accedotechnologies.com/ ">Bucaramanga</a>
+                            <a class="dropdown-item" href="https://alc-nic.accedotechnologies.com/ ">Managua</a>
+                            <a class="dropdown-item" href="https://alc-pei.accedotechnologies.com/">Pereira</a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -75,20 +87,20 @@
 
             <div class="row login-avatar--form">
                 <!-- <form action=""> -->
-                    <div class="col-12 col-md-3">
-                        <h1 class="login-title ml-md-5">Browse Your<br>Picture</h1>
-                    </div>
-                    <div class="col-12 col-md-6" >
-                        <!-- <input type="file" class="upload-cotrol"> -->
-                        <label for="fileUpload1" class="upload-cotrol"> Choose File</label>
-                        <input type="file" name="fileUpload1" id="" class="upload-cotrol">
-                    </div>
-                    <div class="col-12 col-md-3"    >                
-                        <input type="button" value="Save" class="buttom button--green buttom-sm">
-                    </div>
+                <div class="col-12 col-md-3">
+                    <h1 class="login-title ml-md-5">Browse Your<br>Picture</h1>
+                </div>
+                <div class="col-12 col-md-6">
+                    <!-- <input type="file" class="upload-cotrol"> -->
+                    <label for="fileUpload1" class="upload-cotrol"> Choose File</label>
+                    <input type="file" name="fileUpload1" id="" class="upload-cotrol">
+                </div>
+                <div class="col-12 col-md-3">
+                    <input type="button" value="Save" class="buttom button--green buttom-sm">
+                </div>
                 <!-- </form> -->
             </div>
-          
+
 
 
         </div>
@@ -96,14 +108,14 @@
 
 
     <section class="container login-avatar">
-        
+
         <div class="row">
             <div class="super-title super-title--green">
                 <h1>#TheAteam</h1>
                 <span>Preferred nearshore services</span>
             </div>
         </div>
-        
+
     </section>
     <!-- END Content -->
 
