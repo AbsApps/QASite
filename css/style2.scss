@@ -559,9 +559,22 @@ section.apply-form {
 	div > span {
 		font-weight: bold;
 	}
-	div > h1 {
-		font-size: 24px;
+	div > h1.title {
+		font-size: 28px;
 		font-weight: bold;
+		margin-bottom: 35px;
+		span {
+			color: red;
+			&::after {
+				content: "";
+				display: block;
+				// max-width: 55%;
+				width: 200px;
+				border-bottom: 3px solid $base_green;
+				// -webkit-transition: 0.5s;
+				// transition: 0.5s;
+			}
+		}
 	}
 
 	div .form-group > .form-control {
@@ -571,12 +584,52 @@ section.apply-form {
 		margin-bottom: 15px;
 	}
 	div {
+		div.accept-link {
+			span > a {
+				color: $base_green;
+				text-decoration: underline;
+			}
+		}
 		div.form-group {
 			margin-bottom: 25px;
 			label {
 				font-weight: bold;
 			}
 		}
+
+		// div.switch-button {
+		// 	.switch-button__label {
+		// 		&::after {
+		// 			font-size: 14px;
+		// 			content: "Female";
+		// 			padding:8px;
+		// 		}
+		// 		&::before {
+		// 			font-size: 14px;
+		// 			content: "Male";
+		// 			padding:8px;
+		// 		}
+		// 	}
+		// 	// ----------------------------------------------
+		// 	// Estas linea son para manipular los estilos
+		// 	// cuando se hace click
+		// 	// ----------------------------------------------
+		// 	.switch-button__checkbox:checked + .switch-button__label:before {
+		// 		transform: translateX(5rem);
+		// 		content: "Female";
+		// 		border-left: 3.5px solid #fff;
+		// 		border-right: unset;
+		// 	}
+
+		// 	// Invirtiendo after: No a Yes
+		// 	.switch-button__checkbox:checked + .switch-button__label:after {
+		// 		content: "Male";
+		// 		display: block;
+		// 		float: left;
+		// 		margin-left: 25px;
+		// 		margin-right: unset;
+		// 	}
+		// }
 
 		div.header {
 			margin-bottom: 10px;
@@ -637,8 +690,9 @@ section.apply-form {
 			}
 		}
 	}
-	// .access-info div > .form-control {
-	// 	min-width: 256px;
+
+	// div.checkbox-container {
+	// 	display: flex;
 	// }
 }
 
@@ -735,6 +789,75 @@ section.apply-form {
 		float: left;
 		margin-left: 25px;
 		margin-right: unset;
+	}
+}
+
+.check-container {
+	display: block;
+	position: relative;
+	padding-left: 55px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+
+	/* On mouse-over, add a grey background color */
+	&:hover input ~ .checkmark {
+		background-color: #fff;
+	}
+
+	/* When the checkbox is checked, add a blue background */
+	input:checked ~ .checkmark {
+		background-color: $base_green;
+		border: 3px solid $base_green;
+	}
+
+	/* Show the checkmark when checked */
+	input:checked ~ .checkmark:after {
+		display: block;
+	}
+
+	.checkmark {
+		position: absolute;
+		top: 4.5px;
+		left: 0;
+		height: 35px;
+		width: 35px;
+		background-color: #fff;
+		border: 3px solid $base_gray_secondary;
+		border-radius: 3px;
+		transition: all 0.3s;
+		padding-right: 10px;
+		&::after {
+			content: "";
+			position: absolute;
+			display: none;
+
+			// -------------------------------------
+			left: 9px;
+			top: 5px;
+			width: 9px;
+			height: 18px;
+			border: solid white;
+			border-width: 0 3px 3px 0;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+
+			// -------------------------------------
+		}
 	}
 }
 

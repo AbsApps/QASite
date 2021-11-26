@@ -105,7 +105,7 @@
 
             <div class="row mt-4">
                 <div class="col-10 offset-md-1">
-                    <h1>You Are Applying to the Site: <span>Managua</span></h1>
+                    <h1 class="title">You Are Applying to the Site: <span>Managua</span></h1>
                 </div>
             </div>
 
@@ -126,7 +126,14 @@
                 </div>
                 <div class="col-6 col-md-2">
                     <div class="form-group">
-                        <label for="">Gender</label>
+                        <label for="">Gender</label> <br>
+                        <div class="switch-button">
+                            <!-- Checkbox -->
+                            <input type="checkbox" name="switch-button2" id="switch-label2"
+                                class="switch-button__checkbox">
+                            <!-- Botón -->
+                            <label for="switch-label2" class="switch-button__label"></label>
+                        </div>
                     </div>
                 </div>
 
@@ -204,15 +211,29 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <input type="checkbox">
-                    <span>I Agree Terms And Conditions</span>
+                    <div class="d-flex flex-row justify-content-center">
+                        <div class="p-2">
+                            <div class="checkbox-container">
+                                <label class="check-container">I Have Previous Contact <br> / Call Center Experience
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center">
+                        <div class="p-2">
+                            <div class="accept-link">
+                                <input type="checkbox" class="mr-2">
+                                <span>I Agree <a href="#">Terms And Conditions</a></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 text-center">
                     <button class="buttom button--green mt-4">Submit</button>
                 </div>
             </div>
-
-
         </div>
     </section>
 

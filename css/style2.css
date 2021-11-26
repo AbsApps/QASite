@@ -544,9 +544,21 @@ section.apply-form div > span {
   font-weight: bold;
 }
 
-section.apply-form div > h1 {
-  font-size: 24px;
+section.apply-form div > h1.title {
+  font-size: 28px;
   font-weight: bold;
+  margin-bottom: 35px;
+}
+
+section.apply-form div > h1.title span {
+  color: red;
+}
+
+section.apply-form div > h1.title span::after {
+  content: "";
+  display: block;
+  width: 200px;
+  border-bottom: 3px solid #ccdc27;
 }
 
 section.apply-form div .form-group > .form-control {
@@ -555,6 +567,11 @@ section.apply-form div .form-group > .form-control {
 
 section.apply-form div.header.header--movil {
   margin-bottom: 15px;
+}
+
+section.apply-form div div.accept-link span > a {
+  color: #ccdc27;
+  text-decoration: underline;
 }
 
 section.apply-form div div.form-group {
@@ -727,6 +744,72 @@ section.apply-form div div.language a:focus, section.apply-form div div.language
   float: left;
   margin-left: 25px;
   margin-right: unset;
+}
+
+.check-container {
+  display: block;
+  position: relative;
+  padding-left: 55px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Show the checkmark when checked */
+}
+
+.check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.check-container:hover input ~ .checkmark {
+  background-color: #fff;
+}
+
+.check-container input:checked ~ .checkmark {
+  background-color: #ccdc27;
+  border: 3px solid #ccdc27;
+}
+
+.check-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.check-container .checkmark {
+  position: absolute;
+  top: 4.5px;
+  left: 0;
+  height: 35px;
+  width: 35px;
+  background-color: #fff;
+  border: 3px solid #b1b1b0;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding-right: 10px;
+}
+
+.check-container .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 9px;
+  top: 5px;
+  width: 9px;
+  height: 18px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 section.jobs h1.title {
