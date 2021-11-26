@@ -563,19 +563,41 @@ section.apply-form {
 		font-size: 28px;
 		font-weight: bold;
 		margin-bottom: 35px;
-		span {
-			color: red;
+		display: inline-flex;
+		div {
+			// border: 1px solid cyan;
+			min-width: 50px;
+			max-width: 80px;
+			// color: red;
+			margin-left: 10px;
 			&::after {
+				// content: "";
+				// display: block;
+				// // max-width: 55%;
+				// width: 200px;
+				// border-bottom: 3px solid $base_green;
+				// // -webkit-transition: 0.5s;
+				// // transition: 0.5s;
 				content: "";
 				display: block;
-				// max-width: 55%;
-				width: 200px;
 				border-bottom: 3px solid $base_green;
-				// -webkit-transition: 0.5s;
-				// transition: 0.5s;
+				width: 75%;
 			}
 		}
 	}
+	// div > p {
+	// 	color: red;
+	// 	div {
+	// 		span {
+	// 			color: blue;
+	// 			&:after {
+	// 				content: "";
+	// 				display: block;
+	// 				border-bottom: 3px solid $base_green;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	div .form-group > .form-control {
 		border-color: $base_gray_secondary;
@@ -596,40 +618,6 @@ section.apply-form {
 				font-weight: bold;
 			}
 		}
-
-		// div.switch-button {
-		// 	.switch-button__label {
-		// 		&::after {
-		// 			font-size: 14px;
-		// 			content: "Female";
-		// 			padding:8px;
-		// 		}
-		// 		&::before {
-		// 			font-size: 14px;
-		// 			content: "Male";
-		// 			padding:8px;
-		// 		}
-		// 	}
-		// 	// ----------------------------------------------
-		// 	// Estas linea son para manipular los estilos
-		// 	// cuando se hace click
-		// 	// ----------------------------------------------
-		// 	.switch-button__checkbox:checked + .switch-button__label:before {
-		// 		transform: translateX(5rem);
-		// 		content: "Female";
-		// 		border-left: 3.5px solid #fff;
-		// 		border-right: unset;
-		// 	}
-
-		// 	// Invirtiendo after: No a Yes
-		// 	.switch-button__checkbox:checked + .switch-button__label:after {
-		// 		content: "Male";
-		// 		display: block;
-		// 		float: left;
-		// 		margin-left: 25px;
-		// 		margin-right: unset;
-		// 	}
-		// }
 
 		div.header {
 			margin-bottom: 10px;
@@ -684,7 +672,8 @@ section.apply-form {
 					border: unset;
 				}
 				&:focus,
-				&:hover {
+				&:hover,
+				&.active {
 					color: $base_gray;
 				}
 			}
@@ -713,7 +702,7 @@ section.apply-form {
 }
 
 //--------------------------------------
-//            Switch
+//      Switch, Checkbox, Choice
 //--------------------------------------
 
 .switch-button {
@@ -858,6 +847,68 @@ section.apply-form {
 
 			// -------------------------------------
 		}
+	}
+}
+
+.custom-choice {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	padding-right: 10px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 16px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	/* Hide the browser's default radio button */
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+
+		/* When the radio button is checked, add a blue background */
+		&:checked ~ .checkmark {
+			background-color: $base_green;
+			/* Show the indicator (dot/circle) when checked */
+			&:after {
+				display: block;
+			}
+		}
+	}
+
+	/* Create a custom radio button */
+	.checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 25px;
+		width: 25px;
+		background-color: $base_gray_secondary;
+		border-radius: 50%;
+		transition: all 0.3s;
+		/* Create the indicator (the dot/circle - hidden when not checked) */
+		&:after {
+			content: "";
+			position: absolute;
+			display: none;
+
+			// --------------------------------------
+			top: 9px;
+			left: 9px;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: white;
+			// --------------------------------------
+		}
+	}
+
+	/* On mouse-over, add a grey background color */
+	&:hover input ~ .checkmark {
+		background-color: $base_green;
 	}
 }
 

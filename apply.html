@@ -30,7 +30,7 @@
 
 
     <!-- Documentacion para animaciones: https://michalsnik.github.io/aos/ -->
-    <!-- <link href="css/aos.css" rel="stylesheet"> -->
+    <link href="css/aos.css" rel="stylesheet">
 
 </head>
 
@@ -77,8 +77,8 @@
 
 
 
-
-    <section data-aos="fade-up" class="apply-form  custom-panel custom-panel--green mb-5">
+    <!-- Formulario -->
+    <section class="apply-form  custom-panel custom-panel--green mb-5">
         <div class="header header--movil"></div>
         <div class="container">
             <div class="header"></div>
@@ -101,17 +101,13 @@
                     </div>
                 </div>
             </div>
-
-
             <div class="row mt-4">
                 <div class="col-10 offset-md-1">
-                    <h1 class="title">You Are Applying to the Site: <span>Managua</span></h1>
+                    <h1 class="title">You Are Applying to the Site: <div>Managua</div></h1>
                 </div>
             </div>
 
-
             <div class="row">
-
                 <div class="col-12 col-md-5 offset-md-1">
                     <div class="form-group">
                         <label for="txt1">Full Name</label>
@@ -127,12 +123,15 @@
                 <div class="col-6 col-md-2">
                     <div class="form-group">
                         <label for="">Gender</label> <br>
-                        <div class="switch-button">
-                            <!-- Checkbox -->
-                            <input type="checkbox" name="switch-button2" id="switch-label2"
-                                class="switch-button__checkbox">
-                            <!-- Botón -->
-                            <label for="switch-label2" class="switch-button__label"></label>
+                        <div class="d-flex">
+                            <label class="custom-choice">Male
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="custom-choice">Female
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -142,9 +141,18 @@
             <div class="row">
 
                 <div class="col-6 col-md-5 offset-md-1">
-                    <div class="form-group">
-                        <label for="txt3">Identification</label>
-                        <input type="text" class="form-control" id="txt3" placeholder="">
+                    <div class="d-flex align-items-end">
+
+                        <div class="form-group">
+                            <label for="txt6">Identification</label>
+                            <select id="txt6" class="form-control">
+                                <option selected disabled value="Please Choose One">Please Choose One</option>
+                                <option value="">loremp 2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control mt-3" id="txt3" placeholder="">
+                        </div>
                     </div>
                 </div>
                 <div class="col-6 col-md-5">
@@ -302,9 +310,9 @@
 
 
 
-    <!-- <script src="js/aos.js"></script> -->
+    <script src="js/aos.js"></script>
     <script>
-        // AOS.init();
+        AOS.init();
     </script>
 
 </body>

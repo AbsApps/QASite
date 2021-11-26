@@ -548,17 +548,22 @@ section.apply-form div > h1.title {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 35px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
-section.apply-form div > h1.title span {
-  color: red;
+section.apply-form div > h1.title div {
+  min-width: 50px;
+  max-width: 80px;
+  margin-left: 10px;
 }
 
-section.apply-form div > h1.title span::after {
+section.apply-form div > h1.title div::after {
   content: "";
   display: block;
-  width: 200px;
   border-bottom: 3px solid #ccdc27;
+  width: 75%;
 }
 
 section.apply-form div .form-group > .form-control {
@@ -654,7 +659,7 @@ section.apply-form div div.language a:last-child {
   border: unset;
 }
 
-section.apply-form div div.language a:focus, section.apply-form div div.language a:hover {
+section.apply-form div div.language a:focus, section.apply-form div div.language a:hover, section.apply-form div div.language a.active {
   color: #3c3c3a;
 }
 
@@ -810,6 +815,68 @@ section.apply-form div div.language a:focus, section.apply-form div div.language
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.custom-choice {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  padding-right: 10px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+}
+
+.custom-choice input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  /* When the radio button is checked, add a blue background */
+}
+
+.custom-choice input:checked ~ .checkmark {
+  background-color: #ccdc27;
+  /* Show the indicator (dot/circle) when checked */
+}
+
+.custom-choice input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.custom-choice .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #b1b1b0;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+}
+
+.custom-choice .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.custom-choice:hover input ~ .checkmark {
+  background-color: #ccdc27;
 }
 
 section.jobs h1.title {
