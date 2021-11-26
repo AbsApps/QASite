@@ -28,6 +28,9 @@
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
+    <!-- Documentacion para animaciones: https://michalsnik.github.io/aos/ -->
+    <link href="css/aos.css" rel="stylesheet">
+
 
 </head>
 
@@ -72,7 +75,7 @@
     </nav>
 
     <!-- Content MAIN -->
-    <section class="referral custom-panel custom-panel--yellow">
+    <section data-aos="fade-up" class="referral custom-panel custom-panel--yellow">
         <div class="header header--movil"></div>
         <div class="container">
             <div class="header"></div>
@@ -139,14 +142,14 @@
         <div class="row">
             <div class="yellow-bar"></div>
         </div>
-        <div class="row">
+        <div data-aos="fade-up"  class="row">
             <div class="super-title">
                 <h1>#Jointheteam</h1>
                 <span>Be Part of Accedo’s Database</span>
             </div>
         </div>
         <!-- Visible Only Mobile -->
-        <div class="row team-caurousel team-caurousel--movil ">
+        <div data-aos="fade-up"  class="row team-caurousel team-caurousel--movil ">
             <div class="item-carousel col-3">
                 <img class="img-fluid" src="./img/referral/ima4.png" alt="">
             </div>
@@ -161,7 +164,7 @@
             </div>
         </div>
         <!-- Visible Only Desktop -->
-        <div class="row  team-caurousel--desktop">
+        <div  data-aos="fade-up"  class="row  team-caurousel--desktop">
             <div class="col-3 col-md-3">
                 <img class="img-fluid" src="./img/referral/ima4.png" alt="">
             </div>
@@ -215,6 +218,13 @@
 
     <!-- Custom JS -->
     <script src="./js/commons.js"></script>
+
+
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 
 </body>
 

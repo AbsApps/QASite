@@ -29,6 +29,9 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
 
+     <!-- Documentacion para animaciones: https://michalsnik.github.io/aos/ -->
+     <link href="css/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -74,7 +77,7 @@
 
 
     <!-- Content MAIN -->
-    <section class="jobs   custom-panel custom-panel--blue">
+    <section data-aos="fade-up" class="jobs   custom-panel custom-panel--blue">
         <div class="header header--movil"></div>
         <div class="container">
             <div class="header"></div>
@@ -165,8 +168,7 @@
     </section>
 
 
-    <section>
-
+    <section data-aos="fade-up"> 
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -258,6 +260,11 @@
 
     <!-- Custom JS -->
     <script src="./js/commons.js"></script>
+
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
