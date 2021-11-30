@@ -735,3 +735,12 @@ Custom media queries
 
 @media (max-width: 950px) {
 }
+
+
+.top-footer {
+    a{
+        &:hover{
+            color:#fff;
+        }
+    }
+}
